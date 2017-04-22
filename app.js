@@ -17,6 +17,8 @@ function renderData(data, numOfResults) {
   });
   results = results.slice(0, numOfResults);
   $('.poster').html(results);
+  $('#term').val('');
+  $('#numOfResults').val('');
 };
 
 function getData(term, numOfResults) {
@@ -44,7 +46,7 @@ function getData(term, numOfResults) {
 function listenForButtonClick() {
   $('#search').click(function() {
     var term = $('#term').val().trim();
-    var numOfResults = $('#numOfResults').val().trim();
+    var numOfResults = $('#numOfResults').val().trim() || 1;
     getData(term, numOfResults);
   });
 }
