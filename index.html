@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="author" content="Ben Howdle and Dan Matthew">
+   <meta name="description" content="A responsive movie poster grabber">
+   <title>Find a Poster</title>
+   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+<div class="container">
+   <header>
+      <h1>Search Movies</h1>
+   </header>
+   <div id="message"></div>
+   <section id="fetch">
+      <label for="ter">Movie Title</label>
+      <input type="text" id="term" />
+      <br/>
+      <label for="numOfResults">Number of Results</label>
+      <input type="text" id="numOfResults" />
+      <br/>
+      <button id="search">Find poster</button>
+   </section>
+   <section class="poster" id="poster">
+   </section>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>
