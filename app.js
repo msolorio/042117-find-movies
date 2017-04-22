@@ -1,3 +1,10 @@
+///////////////////////////////////////////////////////////////////////
+// a project using the TMDb API
+// API information
+// Docs - https://developers.themoviedb.org/3
+// base url - api.themoviedb.org/3/movie/
+// TMBd API key - f5af0c6697b8912e5df877a54b656b4e
+///////////////////////////////////////////////////////////////////////
 function renderData(data, numOfResults) {
   var results = data.results.map(function(result) {
     return (
@@ -8,23 +15,20 @@ function renderData(data, numOfResults) {
       </div>'
     );
   });
-
   results = results.slice(0, numOfResults);
-
   $('.poster').html(results);
 };
 
 function getData(term, numOfResults) {
   var settings = {
+    type: 'GET',
+    dataType: 'json',
     url: 'https://api.themoviedb.org/3/search/movie',
     data: {
       api_key: 'f5af0c6697b8912e5df877a54b656b4e',
       language: 'en-US',
       query: term
-    },
-    type: 'GET',
-    dataType: 'json'
-
+    }
   };
   
   $.ajax(settings)
